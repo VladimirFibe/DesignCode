@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AccountView: View {
+  @State var showWebsite = true
   var body: some View {
     NavigationView {
       List {
@@ -52,12 +53,28 @@ struct AccountView: View {
         }
         .listRowSeparator(.hidden)
         Section {
-          Link(destination: URL(string: "https://apple.com")!) {
-            HStack {
-              Label("Website", systemImage: "house")
-              Spacer()
-              Image(systemName: "link")
-                .foregroundColor(.secondary)
+          if showWebsite {
+            Link(destination: URL(string: "https://apple.com")!) {
+              HStack {
+                Label("Website", systemImage: "house")
+                Spacer()
+                Image(systemName: "link")
+                  .foregroundColor(.secondary)
+              }
+            }
+            .swipeActions(edge: .leading, allowsFullSwipe: false) {
+              Button {
+                showWebsite = false
+              } label: {
+                Label("Delete", systemImage: "trash")
+              }
+              .tint(.red)
+              Button {
+                
+              } label: {
+                Label("pin", systemImage: "pin")
+              }
+              .tint(.yellow)
             }
           }
           Link(destination: URL(string: "https://youtube.com")!) {

@@ -40,6 +40,7 @@ struct AccountView: View {
             .offset(x: -50, y: -100)
         )
       Text("Meng To")
+        .font(.title.weight(.semibold))
       HStack {
         Image(systemName: "location")
           .imageScale(.large)

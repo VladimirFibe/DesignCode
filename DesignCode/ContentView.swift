@@ -15,8 +15,9 @@ struct ContentView: View {
         .resizable(resizingMode: .stretch)
         .aspectRatio(contentMode: .fit)
         .frame(width: 26.0, height: 26.0)
-        .cornerRadius(20)
+        .cornerRadius(10)
         .padding(9)
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
         .strokeStyle(cornerRadius: 16)
       
       Text("SwiftUI for iOS 15")
@@ -61,7 +62,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
-      .preferredColorScheme(.light)
-      .previewDevice("iPhone 13 Pro Max")
   }
 }

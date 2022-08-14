@@ -33,10 +33,10 @@ struct AccountView: View {
         .padding()
         .background(Circle().fill(.ultraThinMaterial))
         .background(
-          Image(systemName: "hexagon")
-            .symbolVariant(.fill)
-            .foregroundColor(.blue)
-            .font(.system(size: 200))
+          BlobView().frame(width: 400, height: 414).offset(x: 200).scaleEffect(0.5)
+        )
+        .background(
+          HexagonView()
             .offset(x: -50, y: -100)
         )
       Text("Meng To")

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,12 @@
 		E9C69FAB28E75777005B556E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C69FAA28E75777005B556E /* Preview Assets.xcassets */; };
 		E9C69FAD28E75777005B556E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C69FAC28E75777005B556E /* Persistence.swift */; };
 		E9C69FB028E75777005B556E /* SwiftUIAdvanced.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9C69FAE28E75777005B556E /* SwiftUIAdvanced.xcdatamodeld */; };
+		E9C69FB928E75906005B556E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C69FB728E75906005B556E /* ImagePicker.swift */; };
+		E9C69FBA28E75906005B556E /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C69FB828E75906005B556E /* VisualEffectBlur.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9C18B0728E7B6C20053EDA6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E9C69FA028E75776005B556E /* SwiftUIAdvanced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIAdvanced.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C69FA328E75776005B556E /* SwiftUIAdvancedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAdvancedApp.swift; sourceTree = "<group>"; };
 		E9C69FA528E75776005B556E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +27,8 @@
 		E9C69FAC28E75777005B556E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E9C69FAF28E75777005B556E /* SwiftUIAdvanced.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUIAdvanced.xcdatamodel; sourceTree = "<group>"; };
 		E9C69FB128E75777005B556E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9C69FB728E75906005B556E /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E9C69FB828E75906005B556E /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +45,7 @@
 		E9C69F9728E75776005B556E = {
 			isa = PBXGroup;
 			children = (
+				E9C18B0728E7B6C20053EDA6 /* README.md */,
 				E9C69FA228E75776005B556E /* SwiftUIAdvanced */,
 				E9C69FA128E75776005B556E /* Products */,
 			);
@@ -58,6 +64,8 @@
 			children = (
 				E9C69FA328E75776005B556E /* SwiftUIAdvancedApp.swift */,
 				E9C69FA528E75776005B556E /* ContentView.swift */,
+				E9C69FB728E75906005B556E /* ImagePicker.swift */,
+				E9C69FB828E75906005B556E /* VisualEffectBlur.swift */,
 				E9C69FA728E75777005B556E /* Assets.xcassets */,
 				E9C69FAC28E75777005B556E /* Persistence.swift */,
 				E9C69FB128E75777005B556E /* Info.plist */,
@@ -111,7 +119,7 @@
 				};
 			};
 			buildConfigurationList = E9C69F9B28E75776005B556E /* Build configuration list for PBXProject "SwiftUIAdvanced" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -147,6 +155,8 @@
 			files = (
 				E9C69FAD28E75777005B556E /* Persistence.swift in Sources */,
 				E9C69FB028E75777005B556E /* SwiftUIAdvanced.xcdatamodeld in Sources */,
+				E9C69FB928E75906005B556E /* ImagePicker.swift in Sources */,
+				E9C69FBA28E75906005B556E /* VisualEffectBlur.swift in Sources */,
 				E9C69FA628E75776005B556E /* ContentView.swift in Sources */,
 				E9C69FA428E75776005B556E /* SwiftUIAdvancedApp.swift in Sources */,
 			);
@@ -285,6 +295,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,6 +325,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,10 +1,3 @@
-//
-//  SwiftUIAdvancedApp.swift
-//  SwiftUIAdvanced
-//
-//  Created by Vladimir Fibe on 30.09.2022.
-//
-
 import SwiftUI
 
 @main

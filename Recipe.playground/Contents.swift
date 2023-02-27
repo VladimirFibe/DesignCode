@@ -1,4 +1,4 @@
-import Foundation
+import Cocoa
 
 final class RecipeHTTPClient {
     static let shared = RecipeHTTPClient()
@@ -6,12 +6,17 @@ final class RecipeHTTPClient {
     
     func getProduct() {
         Task {
-            guard let url = URL(string: "https://api.spoonacular.com/recipes/random?apiKey=a67a5241c34f45429f75c2d8a1858a67&number=8") else { return }
+            guard let url = URL(string: "https://api.spoonacular.com/recipes/random?apiKey=a67a5241c34f45429f75c2d8a1858a67&number=8")
+            else { return }
             let (data, response) = try await URLSession.shared.data(from: url)
             guard (response as? HTTPURLResponse)?.statusCode == 200 else { return }
             let str = String(decoding: data, as: UTF8.self)
             print(str)
-            guard let response = try? JSONDecoder().decode(RecipeResponse.self, from: data) else { return }
+//            guard let response = try? JSONDecoder().decode(RecipeResponse.self, from: data) else { return }
         }
     }
 }
+
+RecipeHTTPClient.shared.getProduct()
+
+// https://app.quicktype.io/#

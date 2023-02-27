@@ -3,24 +3,9 @@ import SwiftUI
 extension URL {
     static let host = "api.spoonacular.com"
     static let scheme = "https"
-    static let apiKey = "9ee0a79c9a79406a874c23b8c02ab9f1"
-    static var development: URL {
-        URL(string: "https://api.spoonacular.com/")!
-    }
+    static let apiKey = "a67a5241c34f45429f75c2d8a1858a67" // "9ee0a79c9a79406a874c23b8c02ab9f1"
     
-    static var production: URL {
-        URL(string: "https://api.spoonacular.com/")!
-    }
-    
-    static var `default`: URL {
-        #if DEBUG
-        return development
-        #else
-        return production
-        #endif
-    }
-    
-    static var allCategories: URL {
+    static var recipesRandom: URL {
         var components = URLComponents()
         components.host = host
         components.path = "/recipes/random"

@@ -28,14 +28,14 @@ struct Recipe: Codable {
     let cuisines, dishTypes, diets, occasions: [String]
     let instructions: String
     let analyzedInstructions: [AnalyzedInstruction]
-    let originalID: JSONNull?
+//    let originalID: JSONNull?
     let spoonacularSourceURL: String
 
     enum CodingKeys: String, CodingKey {
         case vegetarian, vegan, glutenFree, dairyFree, veryHealthy, cheap, veryPopular, sustainable, lowFodmap, weightWatcherSmartPoints, gaps, preparationMinutes, cookingMinutes, aggregateLikes, healthScore, creditsText, license, sourceName, pricePerServing, extendedIngredients, id, title, readyInMinutes, servings
         case sourceURL = "sourceUrl"
         case image, imageType, summary, cuisines, dishTypes, diets, occasions, instructions, analyzedInstructions
-        case originalID = "originalId"
+//        case originalID = "originalId"
         case spoonacularSourceURL = "spoonacularSourceUrl"
     }
 }
@@ -107,10 +107,6 @@ class JSONNull: Codable {
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
         return true
     }
-//
-//    public var hashValue: Int {
-//        return 0
-//    }
 
     public init() {}
 

@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var recipes: [RecipeModel] = RecipeModel.all
     var body: some View {
         NavigationStack {
-            Text("Home")
-                .navigationBarTitle("My Recipes")
+            RecipeList(recipes: recipes)
+            .navigationBarTitle("My Recipes")
         }
+
     }
 }
 

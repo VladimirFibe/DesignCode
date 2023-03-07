@@ -3,7 +3,6 @@ import SwiftUI
 struct RecipeCard: View {
     var recipe: RecipeModel
     var body: some View {
-        HStack {
             AsyncImage(url: URL(string: recipe.image), content: { image in
                 image
                     .resizable()
@@ -30,7 +29,6 @@ struct RecipeCard: View {
                     .shadow(color: .black, radius: 3, x: 0, y: 0)
             }
             
-        }
     }
 }
 

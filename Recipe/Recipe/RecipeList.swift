@@ -9,11 +9,12 @@ struct RecipeList: View {
                 .fontWeight(.medium)
                 .opacity(0.7)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 160))]) {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
                 ForEach(recipes) { recipe in
                     RecipeCard(recipe: recipe)
                 }
             }
+            .padding(.top)
         }
         .padding(.horizontal)
     }

@@ -1,10 +1,10 @@
-import Foundation
+import SwiftUI
 
 struct RecipeModel: Identifiable {
     let id: Int
     let name: String
     let image: String
-    let description: String
+    var description: LocalizedStringKey
     let ingredients: String
     let directions: String
     let category: Category.RawValue
@@ -14,8 +14,14 @@ struct RecipeModel: Identifiable {
     init(recipe: Recipe) {
         id = recipe.id
         name = recipe.title
-        image = recipe.image ?? ""
-        description = recipe.summary
+        image = recipe.image
+        description = ""
+        do {
+            let dom = try HTMLParser().parse(html: recipe.summary)
+            let markdown = dom.toMarkdown(options: .unorderedListBullets)
+            description = LocalizedStringKey(markdown)
+            print(description)
+        } catch {}
         ingredients = "some ingredients"
         directions = recipe.instructions
         category = "Breakfast"

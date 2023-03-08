@@ -1,12 +1,12 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var recipes: [RecipeModel] = RecipeModel.all
+    @EnvironmentObject var viewModel: RecipeViewModel
 
     var body: some View {
         NavigationStack {
             ScrollView {
-                RecipeList(recipes: recipes)
+                RecipeList(recipes: viewModel.recipes)
             }
             .navigationBarTitle("My Recipes")
         }
@@ -16,5 +16,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(RecipeViewModel())
     }
 }

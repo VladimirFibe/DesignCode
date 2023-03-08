@@ -2,10 +2,11 @@ import SwiftUI
 
 @main
 struct RecipeApp: App {
-    
+    @StateObject var viewModel = RecipeViewModel()
     var body: some Scene {
         WindowGroup {
-            RecipeView(recipe: RecipeModel.all[0])
+            TabBar()
+                .environmentObject(viewModel)
         }
     }
 }

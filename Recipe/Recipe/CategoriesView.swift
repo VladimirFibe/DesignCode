@@ -1,17 +1,19 @@
-//
-//  CategoriesView.swift
-//  Recipe
-//
-//  Created by Vladimir on 26.02.2023.
-//
-
 import SwiftUI
 
 struct CategoriesView: View {
     var body: some View {
         NavigationStack {
-            Text("Home")
-                .navigationBarTitle("Categories")
+            List {
+                ForEach(Category.allCases) { category   in
+                    NavigationLink(value: category) {
+                        Text("\(category.rawValue)s")
+                    }
+                }
+            }
+            .navigationBarTitle("Categories")
+            .navigationDestination(for: Category.self) { category in
+                CategoryView(category: category)
+            }
         }
     }
 }

@@ -11,6 +11,7 @@
 		02324B922972F66500AA02D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02324B912972F66500AA02D4 /* ContentView.swift */; };
 		02324B942972F66700AA02D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02324B932972F66700AA02D4 /* Assets.xcassets */; };
 		02324B972972F66700AA02D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02324B962972F66700AA02D4 /* Preview Assets.xcassets */; };
+		27AB8AAF29B9A5E2001FEB43 /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8AAE29B9A5E2001FEB43 /* NavigationStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		02324B962972F66700AA02D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		02324B9D2972F68100AA02D4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		27AB8AAD29B96577001FEB43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		27AB8AAE29B9A5E2001FEB43 /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				27AB8AAD29B96577001FEB43 /* Info.plist */,
 				02324B8F2972F66500AA02D4 /* DesignCodeiOS16App.swift */,
 				02324B912972F66500AA02D4 /* ContentView.swift */,
+				27AB8AAE29B9A5E2001FEB43 /* NavigationStackView.swift */,
 				02324B932972F66700AA02D4 /* Assets.xcassets */,
 				02324B952972F66700AA02D4 /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02324B922972F66500AA02D4 /* ContentView.swift in Sources */,
+				27AB8AAF29B9A5E2001FEB43 /* NavigationStackView.swift in Sources */,
 				02324B902972F66500AA02D4 /* DesignCodeiOS16App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

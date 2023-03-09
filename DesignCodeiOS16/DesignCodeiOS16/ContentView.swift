@@ -1,15 +1,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var time = 0.2
+    @State private var time = 0.0
+    @State private var showMessage = true
+    let roundRect = RoundedRectangle(cornerRadius: 10)
+    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     var body: some View {
-        let roundRect = RoundedRectangle(cornerRadius: 10)
+        content
+            .opacity(showMessage ? 1 : 0)
+            .scaleEffect(showMessage ? 1 : 0)
+            .rotationEffect(.degrees(showMessage ? 0 : 30))
+            .offset(y: showMessage ? 0 : 500)
+            .blur(radius: showMessage ? 0 : 20)
+        .padding(10)
+        .dynamicTypeSize(.xSmall ... .xxxLarge)
+    }
+    var content: some View {
         VStack(alignment: .center, spacing: 20.0) {
             Image(systemName: "timelapse", variableValue: time)
                 .imageScale(.large)
                 .font(.system(size: 50))
                 .fontWeight(.thin)
                 .foregroundColor(.accentColor)
+                .onReceive(timer) { value in
+                    time = time < 1.0 ? time + 0.1 : 0.0
+                }
             Text("Switching apps".uppercased())
                 .font(.largeTitle.width(.compressed))
                 .fontWeight(.bold)
@@ -20,7 +35,9 @@ struct ContentView: View {
                 .fontWeight(.medium)
             
             Button(action: {
-                print("yes")
+                withAnimation {
+                    showMessage.toggle()
+                }
             }) {
                 Text("Got it")
                     .padding(.vertical)
@@ -36,8 +53,6 @@ struct ContentView: View {
         .overlay(roundRect.stroke(.linearGradient(colors: [.white.opacity(0.5), .clear], startPoint: .top, endPoint: .bottom)))
         .shadow(color: .black.opacity(0.3), radius: 20, y: 20)
         .frame(maxWidth: 500)
-        .padding(10)
-        .dynamicTypeSize(.xSmall ... .xxxLarge)
     }
 }
 

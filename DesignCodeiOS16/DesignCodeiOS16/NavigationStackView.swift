@@ -3,15 +3,22 @@ import SwiftUI
 struct NavigationStackView: View {
     var body: some View {
         NavigationStack {
-            List(0 ..< 5) { item in
-                NavigationLink(destination: Text("Content")) {
-                    Label("Item", systemImage: "house")
+            List(navigationItems) { item in
+                NavigationLink(value: item) {
+                    Label(item.title, systemImage: item.icon)
                         .foregroundColor(.primary)
                 }
             }
             .listStyle(.plain)
             .navigationTitle("SwiftUI Apps")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: NavigationItem.self) { item in
+                switch item.menu {
+                case .compass: ContentView()
+                default:
+                    Text(item.title)
+                }
+            }
         }
     }
 }

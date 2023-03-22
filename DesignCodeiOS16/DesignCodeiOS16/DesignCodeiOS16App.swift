@@ -4,7 +4,7 @@ import SwiftUI
 struct DesignCodeiOS16App: App {
     var body: some Scene {
         WindowGroup {
-            NavigationStackView()
+            ContentView()
         }
     }
 }

@@ -15,6 +15,7 @@
 		27AB8AB129B9AC25001FEB43 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8AB029B9AC25001FEB43 /* Data.swift */; };
 		27AB8AB329B9B23D001FEB43 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8AB229B9B23D001FEB43 /* MessageView.swift */; };
 		27AB8AB729B9B39A001FEB43 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB8AB629B9B39A001FEB43 /* MenuView.swift */; };
+		27E7D54E29CB59C400FDCE34 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7D54D29CB59C400FDCE34 /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		27AB8AB029B9AC25001FEB43 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		27AB8AB229B9B23D001FEB43 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		27AB8AB629B9B39A001FEB43 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		27E7D54D29CB59C400FDCE34 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				27AB8AAD29B96577001FEB43 /* Info.plist */,
 				02324B8F2972F66500AA02D4 /* DesignCodeiOS16App.swift */,
 				02324B912972F66500AA02D4 /* ContentView.swift */,
+				27E7D54D29CB59C400FDCE34 /* ChartView.swift */,
 				27AB8AB629B9B39A001FEB43 /* MenuView.swift */,
 				27AB8AB229B9B23D001FEB43 /* MessageView.swift */,
 				27AB8AAE29B9A5E2001FEB43 /* NavigationStackView.swift */,
@@ -156,6 +159,7 @@
 				27AB8AB729B9B39A001FEB43 /* MenuView.swift in Sources */,
 				02324B922972F66500AA02D4 /* ContentView.swift in Sources */,
 				27AB8AAF29B9A5E2001FEB43 /* NavigationStackView.swift in Sources */,
+				27E7D54E29CB59C400FDCE34 /* ChartView.swift in Sources */,
 				02324B902972F66500AA02D4 /* DesignCodeiOS16App.swift in Sources */,
 				27AB8AB129B9AC25001FEB43 /* Data.swift in Sources */,
 				27AB8AB329B9B23D001FEB43 /* MessageView.swift in Sources */,

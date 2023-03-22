@@ -20,9 +20,9 @@ struct ContentView: View {
             case .compass:
                 MessageView()
             case .card:
-                Text("Card")
+                GridView()
             case .charts:
-                Text("Chart")
+                ChartView()
             case .radial:
                 Text("Radial")
             case .halfsheet:

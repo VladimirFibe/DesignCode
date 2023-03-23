@@ -22,7 +22,7 @@ struct ContentView: View {
             case .card:
                 GridView()
             case .charts:
-                ChartView()
+                DetailView()
             case .radial:
                 Text("Radial")
             case .halfsheet:
@@ -37,6 +37,7 @@ struct ContentView: View {
             MenuView()
                 .presentationDetents([.medium, .large])
         }
+        .onTapGesture {}
         .gesture(longPress)
     }
 }

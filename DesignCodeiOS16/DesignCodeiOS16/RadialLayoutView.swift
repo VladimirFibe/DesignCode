@@ -3,9 +3,14 @@ import SwiftUI
 struct RadialLayoutView: View {
     var icons = ["calendar", "message", "figure.walk", "music.note"]
     var numbers = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    @State private var isRadial = true
     var body: some View {
+        let layout = isRadial ? AnyLayout(RadialLayout()) : AnyLayout(CustomLayout())
         ZStack {
-            RadialLayout {
+            Rectangle().fill(.gray.gradient)
+                .ignoresSafeArea()
+            clockCase
+            layout {
                 ForEach(icons, id: \.self) { icon in
                     Circle()
                         .frame(width: 44)
@@ -16,7 +21,7 @@ struct RadialLayoutView: View {
             }
             .frame(width: 120)
             
-            RadialLayout {
+            layout {
                 ForEach(numbers, id: \.self) { number in
                     Text("\(number)")
                         .font(.system(.title, design: .rounded)).bold()
@@ -25,7 +30,7 @@ struct RadialLayoutView: View {
             }
             .frame(width: 240)
             
-            RadialLayout {
+            layout {
                 ForEach(numbers, id: \.self) { number in
                     Text("\(number * 5)")
                         .font(.system(.caption, design: .rounded))
@@ -37,6 +42,33 @@ struct RadialLayoutView: View {
             Circle()
                 .strokeBorder(style: StrokeStyle(lineWidth: 10, dash: [1, 10]))
                 .frame(width: 220)
+        }
+        .onTapGesture {
+            withAnimation(.spring()) {
+                isRadial.toggle()
+            }
+        }
+    }
+    var clockCase: some View {
+        ZStack {
+            Circle()
+                .foregroundStyle(.gray
+                    .shadow(.inner(color: .gray, radius: 30, x: 30, y: 30))
+                    .shadow(.inner(color: .white.opacity(0.2), radius: 0, x: 1, y: 1))
+                    .shadow(.inner(color: .black.opacity(0.2), radius: 0, x: -1, y: -1))
+                )
+                .frame(width: 360)
+            
+            Circle()
+                .foregroundStyle(.white
+                    .shadow(.inner(color: .gray, radius: 30, x: -30, y: -30))
+                    .shadow(.drop(color: .black.opacity(0.3), radius: 30, x: 30, y: 30))
+                )
+                .frame(width: 320)
+            Circle()
+                .foregroundStyle(.white.shadow(.inner(
+                    color: .gray, radius: 30, x: 30, y: 30)))
+                .frame(width: 280)
         }
     }
 }

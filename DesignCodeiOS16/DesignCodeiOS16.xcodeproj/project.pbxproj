@@ -19,6 +19,7 @@
 		27E7D55029CBBDE100FDCE34 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7D54F29CBBDE100FDCE34 /* GridView.swift */; };
 		27E7D55229CBC8EF00FDCE34 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7D55129CBC8EF00FDCE34 /* CardView.swift */; };
 		27E7D55429CBCED600FDCE34 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7D55329CBCED600FDCE34 /* DetailView.swift */; };
+		27E7D55629CBD6C000FDCE34 /* RadialLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7D55529CBD6C000FDCE34 /* RadialLayoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		27E7D54F29CBBDE100FDCE34 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		27E7D55129CBC8EF00FDCE34 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		27E7D55329CBCED600FDCE34 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		27E7D55529CBD6C000FDCE34 /* RadialLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialLayoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				27AB8AB229B9B23D001FEB43 /* MessageView.swift */,
 				27AB8AAE29B9A5E2001FEB43 /* NavigationStackView.swift */,
 				27E7D55329CBCED600FDCE34 /* DetailView.swift */,
+				27E7D55529CBD6C000FDCE34 /* RadialLayoutView.swift */,
 				27AB8AB029B9AC25001FEB43 /* Data.swift */,
 				02324B932972F66700AA02D4 /* Assets.xcassets */,
 				02324B952972F66700AA02D4 /* Preview Content */,
@@ -168,6 +171,7 @@
 				27AB8AB729B9B39A001FEB43 /* MenuView.swift in Sources */,
 				27E7D55229CBC8EF00FDCE34 /* CardView.swift in Sources */,
 				02324B922972F66500AA02D4 /* ContentView.swift in Sources */,
+				27E7D55629CBD6C000FDCE34 /* RadialLayoutView.swift in Sources */,
 				27E7D55429CBCED600FDCE34 /* DetailView.swift in Sources */,
 				27E7D55029CBBDE100FDCE34 /* GridView.swift in Sources */,
 				27AB8AAF29B9A5E2001FEB43 /* NavigationStackView.swift in Sources */,
